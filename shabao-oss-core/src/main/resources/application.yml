@@ -1,0 +1,11 @@
+server:
+  port: 8080
+  tomcat:
+    max-http-header-size: 3145728  
+spring:
+  application:
+    name: shabao-oss
+  freemarker:
+    request-context-attribute: request
+    settings:
+      number_format: 0.##

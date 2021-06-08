@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.xiaoshabao</groupId>
+		<artifactId>shabao-base-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>com.xiaoshabao.oss</groupId>
+	<artifactId>shabao-oss</artifactId>
+	<name>shabao-oss</name>
+	<description>对象存储</description>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>shabao-oss-core</module>
+		<module>shabao-oss-cloud</module>
+	</modules>
+	
+	<properties>
+		<shabao-oss.version>1.0.0</shabao-oss.version>
+	</properties>
+
+	<!--依赖管理，用于管理子项目的依赖 -->
+	<dependencyManagement>
+		<dependencies>
+			<!--增加自身的依赖 begin -->
+			<dependency>
+				<groupId>com.xiaoshabao.oss</groupId>
+				<artifactId>shabao-oss-core</artifactId>
+				<version>${shabao-oss.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.xiaoshabao.oss</groupId>
+				<artifactId>shabao-oss-cloud</artifactId>
+				<version>${shabao-oss.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
